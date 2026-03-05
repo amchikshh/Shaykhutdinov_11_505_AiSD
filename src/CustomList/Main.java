@@ -1,0 +1,55 @@
+package CustomList;
+
+public class Main {
+    public static void main(String[] args){
+        CustomList list = new CustomList();
+        System.out.println("-----------------------");
+        System.out.println("Проверка на пустоту");
+        System.out.println(list.isEmpty());
+        System.out.println("-----------------------");
+        list.addInTheStart(10);
+        list.addInTheEnd(12);
+        System.out.println("-----------------------");
+        System.out.println("Проверка на пустоту");
+        System.out.println(list.isEmpty());
+        System.out.println("-----------------------");
+        list.addInTheStart(5);
+        list.deleteLast();
+        list.addInTheStart(11);
+        System.out.println("-----------------------");
+        list.print();
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        System.out.println("Индексы вхождения элемента 10");
+        list.elementEntryIndexes(10);
+        System.out.println("-----------------------");
+        list.addInTheStart(10);
+        System.out.println("-----------------------");
+        list.print();
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        System.out.println("Индексы вхождения элемента 10");
+        list.elementEntryIndexes(10);
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        System.out.println("Вхождение элемента 5");
+        System.out.println(list.elementEntry(5));
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        System.out.println("размер");
+        System.out.println(list.size());
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        list.print();
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        System.out.println("reverse");
+        list.reverse();
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        System.out.println("Удаление 2 индекса");
+        list.deleteIndex(2);
+        list.print();
+        System.out.println("-----------------------");
+    }
+}
