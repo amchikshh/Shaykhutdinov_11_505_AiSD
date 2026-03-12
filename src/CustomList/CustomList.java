@@ -119,6 +119,26 @@ public class CustomList {
 
     }
 
+    public void deleteFrom(int index){
+        int counter = 0;
+        Node pointer = head;
+        if (head == null){
+            System.out.println("Удаление невозможно");
+            return;
+        }
+
+        if (index == 0){
+            head = null;
+            return;
+        }
+
+        while(counter != index - 1){
+            counter++;
+            pointer = pointer.next;
+        }
+        pointer.next = null;
+    }
+
     public void deleteAllSame(int info){
         if (head == null){
             System.out.println("Удаление невозможно");
@@ -127,11 +147,16 @@ public class CustomList {
 
         Node pointer = head;
 
+        while (head.info == info) {
+            head = head.next;
+        }
+
         while (pointer.next != null){
-            if (pointer.info == info){
+            if (pointer.next.info == info){
+                pointer.next = pointer.next.next;
+            } else {
                 pointer = pointer.next;
             }
-            pointer = pointer.next;
         }
     }
 

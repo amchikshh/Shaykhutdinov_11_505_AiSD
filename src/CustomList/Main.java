@@ -51,5 +51,23 @@ public class Main {
         list.deleteIndex(2);
         list.print();
         System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        list.addInTheEnd(10);
+        list.addInTheStart(10);
+        list.print();
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        list.deleteAllSame(10);
+        list.print();
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        list.addInTheStart(18);
+        list.addInTheStart(23);
+        list.print();
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        list.deleteFrom(1);
+        list.print();
+        System.out.println("-----------------------");
     }
 }
